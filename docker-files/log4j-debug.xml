@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <Appenders>
+        <Console name="console-log" target="SYSTEM_OUT">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] [traceId=%X{trace-id-value}] [msisdn=%X{msisdn-value}] [operation=%X{operation-value}] [deviceOS=%X{device-os-value}] [clientVersion=%X{client-version-value}] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="debug" additivity="false">
+            <AppenderRef ref="console-log" level="debug"/>
+        </Root>
+    </Loggers>
+</Configuration>
